@@ -24,8 +24,8 @@ COPY train3.py /JupyterNotes
 COPY convnet3.py /JupyterNotes
 COPY dataset2.py /JupyterNotes
 
-RUN mkdir /JupyterNotes/red.png && mkdir /JupyterNotes/green.png
-COPY red.png /JupyterNotes/red.png
+RUN mkdir /JupyterNotes/healthy && mkdir /JupyterNotes/green.png
+COPY healthy /JupyterNotes/healthy
 COPY green.png /JupyterNotes/green.png
 
 
