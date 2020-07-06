@@ -24,9 +24,9 @@ COPY train3.py /JupyterNotes
 COPY convnet3.py /JupyterNotes
 COPY dataset2.py /JupyterNotes
 
-RUN mkdir /JupyterNotes/red.png && mkdir /JupyterNotes/green.png
-COPY red.png /JupyterNotes/red.png
-COPY green.png /JupyterNotes/green.png
+RUN mkdir /JupyterNotes/healthy && mkdir /JupyterNotes/senescent
+COPY healthy /JupyterNotes/healthy
+COPY senescent /JupyterNotes/senescent
 
 
 EXPOSE 8080
