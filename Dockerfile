@@ -1,7 +1,7 @@
 #Download base image python:3.6-stretch
 FROM python:3.6-stretch
 
-LABEL maintainer="C.Deligiorgi@newcastle.ac.uk"
+LABEL maintainer="C.Deligiorgi2@newcastle.ac.uk"
 
 ENV TZ=Europe/London
 
