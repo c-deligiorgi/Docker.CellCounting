@@ -20,13 +20,16 @@ COPY jupyter_notebook_config.py /root/.jupyter/.
 WORKDIR /JupyterNotes
 
 # Copy over python scripts
-COPY train3.py /JupyterNotes
-COPY convnet3.py /JupyterNotes
-COPY dataset2.py /JupyterNotes
+RUN mkdir /JupyterNotes/modelTrain3
+COPY modelTrain3/train3.py /JupyterNotes/modelTrain3
+COPY modelTrain3/convnet3.py /JupyterNotes/modelTrain3
+COPY modelTrain3/dataset2.py /JupyterNotes/modelTrain3
+COPY Welcome.ipynb /JupyterNotes
 
-RUN mkdir /JupyterNotes/healthy && mkdir /JupyterNotes/senescent
-COPY healthy /JupyterNotes/healthy
-COPY senescent /JupyterNotes/senescent
+# Copy Data images
+RUN mkdir -p /JupyterNotes/Data/healthy && mkdir /JupyterNotes/Data/senescent
+ADD Data/healthy /JupyterNotes/Data/healthy
+ADD Data/senescent /JupyterNotes/Data/senescent
 
 
 EXPOSE 8080
