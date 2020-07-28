@@ -19,12 +19,19 @@ COPY jupyter_notebook_config.py /root/.jupyter/.
 # Define the working directory
 WORKDIR /JupyterNotes
 
-# Copy over python scripts
+# Copy over train3.py scripts
 RUN mkdir /JupyterNotes/modelTrain3
 COPY modelTrain3/train3.py /JupyterNotes/modelTrain3
 COPY modelTrain3/convnet3.py /JupyterNotes/modelTrain3
 COPY modelTrain3/dataset2.py /JupyterNotes/modelTrain3
 COPY Welcome.ipynb /JupyterNotes
+
+# Copy over VGG model scripts
+RUN mkdir /JupyterNotes/VGG
+COPY VGG/VGG_train.py /JupyterNotes/VGG
+COPY VGG/Conv.py /JupyterNotes/VGG
+COPY VGG/dataset2.py /JupyterNotes/VGG
+
 
 # Copy Data images
 RUN mkdir -p /JupyterNotes/Data/healthy && mkdir /JupyterNotes/Data/senescent
