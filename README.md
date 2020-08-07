@@ -14,7 +14,7 @@ Docker Desktop for Windows offers the GUI which allows the user to start, pause 
 
 * Once the image pull is completed, run the following command at the command prompt:
 
-```docker run -p 8080:8080 pikachris/cellcounting:0.1```
+```docker run -p 8080:8080 pikachris/cellcounting:0.2```
 
 This command creates an instance of the container.
 
